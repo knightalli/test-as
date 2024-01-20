@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
+import { CompanyDataService } from '../../../../services/companyData/company-data.service';
 
 @Component({
   selector: 'app-company-item',
@@ -9,16 +10,14 @@ import { Router } from '@angular/router';
   styleUrl: './company-item.component.scss'
 })
 export class CompanyItemComponent {
-  @Input() id: number = 0;
-  @Input() logo: string = '';
-  @Input() suffix: string = '';
-  @Input() businessName: string = '';
-  @Input() industry: string = '';
-  @Input() type: string = '';
+  @Input() company: any;
 
-  constructor(private _router: Router) { }
+  constructor(private _router: Router, private _cds: CompanyDataService) {
+   }
 
-  public navigateToDetail(id: number): void {
-    this._router.navigate
+  public navigateToDetail(id:number): void {
+    console.log(this.company)
+    this._cds.setCompany(this.company);
+    this._router.navigateByUrl(`detail/${id}`)
   }
 }

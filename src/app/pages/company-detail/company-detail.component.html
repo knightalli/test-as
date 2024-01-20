@@ -1,1 +1,11 @@
-<p>company-detail works! </p>
+<p>company-detail works!</p>
+<div>
+    <ul>
+        <li>Логотип: <img src="{{ company.logo }}" width="150px" /></li>
+        <li>Название: {{ company.suffix }} "{{ company.business_name }}"</li>
+        <li>Вид деятельности: {{ company.industry }}</li>
+        <li>Слоган: {{company.catch_phrase}}</li>
+        <li>Контактный номер телефона: {{company.phone_number}}</li>
+        <li>Адрес: {{company.full_address}}</li>
+    </ul>
+</div>

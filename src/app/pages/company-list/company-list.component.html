@@ -1,13 +1,11 @@
 <p>company-list works!</p>
+<app-company-filter></app-company-filter>
+<app-company-sort></app-company-sort>
 <ul>
   @for (company of listOfCompanies; track $index) {
   <li>
     <app-company-item
-      [logo]="company.logo"
-      [suffix]="company.suffix"
-      [businessName]="company.business_name"
-      [industry]="company.industry"
-      [type]="company.type"
+    [company]="company"
     ></app-company-item>
   </li>
   }

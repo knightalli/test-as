@@ -1,7 +1,8 @@
-<p>company-item works!</p>
-<div class="logo"><img src='{{logo}}' width="150px"></div>
-<ul>
-    <li>Название компании: {{suffix}} "{{businessName}}"</li>
-    <li>Вид деятельности: {{industry}}</li>
-    <li>Вид: {{type}}</li>
-</ul>
+<div (click)="navigateToDetail(company.id)">
+  <div class="logo"><img src="{{ company.logo }}" width="150px" /></div>
+  <ul>
+    <li>Название компании: {{ company.suffix }} "{{ company.business_name }}"</li>
+    <li>Вид деятельности: {{ company.industry }}</li>
+    <li>Вид: {{ company.type }}</li>    
+  </ul>
+</div>
