@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, Input, OnDestroy } from '@angular/core';
 import { HttpClientService } from '../../services/httpClient/http-client.service';
 import { HttpClientModule } from '@angular/common/http';
 import { CompanyItemComponent } from './companents/company-item/company-item.component';
@@ -14,8 +14,9 @@ import { CompanySortComponent } from './companents/company-sort/company-sort.com
   providers: [HttpClientService]
 })
 export class CompanyListComponent implements OnDestroy {
+  @Input() public field: string = '';
 
-  public listOfCompanies: any[] = [];
+  public listOfCompanies: any[] = [];  
 
   constructor(private httpService: HttpClientService){}
 
@@ -26,10 +27,17 @@ export class CompanyListComponent implements OnDestroy {
     console.log(this.listOfCompanies)
   }
 
-  // public navigateToDetail(id: number): void {
-  //   this._router.navigateByUrl('detail/${id}')
-  // }
+  public byField(field: string) {
+    return (a: any,b: any) => a[field] > b[field] ? 1 : -1
+  }
 
+  public sortListOfCompanies(field: string) {
+    this.listOfCompanies.sort(this.byField(field))
+  }
 
+  public sortByField(field:string) {
+    if (field) this.sortListOfCompanies(field);
+  }
 
+  
 }

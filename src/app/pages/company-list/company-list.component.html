@@ -1,6 +1,6 @@
 <p>company-list works!</p>
 <app-company-filter></app-company-filter>
-<app-company-sort></app-company-sort>
+<app-company-sort (sortFieldChange)="sortByField($event)"></app-company-sort>
 <ul>
   @for (company of listOfCompanies; track $index) {
   <li>
