@@ -1,9 +1,14 @@
 <p>company-list works!</p>
 <ul>
-    @for (company of listOfCompanies; track $index) {
-    <li><app-company-item [logo]="company.logo" [suffix]="company.suffix" [businessName]="company.business_name" [industry]="company.industry" [type]="company.type"></app-company-item></li>
-    }
+  @for (company of listOfCompanies; track $index) {
+  <li>
+    <app-company-item
+      [logo]="company.logo"
+      [suffix]="company.suffix"
+      [businessName]="company.business_name"
+      [industry]="company.industry"
+      [type]="company.type"
+    ></app-company-item>
+  </li>
+  }
 </ul>
-@for (company of listOfCompanies; track $index) {
-    {{$index}}{{company.id}}
-    }

@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-company-item',
@@ -14,5 +15,10 @@ export class CompanyItemComponent {
   @Input() businessName: string = '';
   @Input() industry: string = '';
   @Input() type: string = '';
-  
+
+  constructor(private _router: Router) { }
+
+  public navigateToDetail(id: number): void {
+    this._router.navigate
+  }
 }
