@@ -1,11 +1,23 @@
 <div class="container-detail">
-    <h2>Детальная информация о компании {{company.id}}</h2>
-    <ul class="detail-list">
-        <li class="detail-list-item">Логотип: <img src="{{ company.logo }}" width="150px" /></li>
-        <li class="detail-list-item">Название: <span>{{ company.suffix }} "{{ company.business_name }}"</span></li>
-        <li class="detail-list-item">Вид деятельности: <span>{{ company.industry }}</span> </li>
-        <li class="detail-list-item">Слоган: <span>{{company.catch_phrase}}</span></li>
-        <li class="detail-list-item">Контактный номер телефона: <span>{{company.phone_number}}</span></li>
-        <li class="detail-list-item">Адрес: <span>{{company.full_address}}</span></li>
-    </ul>
+  <h2>Детальная информация о компании {{ company.id }}</h2>
+  <ul class="detail-list">
+    <li class="detail-list-item">
+      Логотип: <img src="{{ company.logo }}" width="150px" />
+    </li>
+    <li class="detail-list-item">
+      Название: <span>{{ company.suffix }} "{{ company.business_name }}"</span>
+    </li>
+    <li class="detail-list-item">
+      Вид деятельности: <span>{{ company.industry }}</span>
+    </li>
+    <li class="detail-list-item">
+      Слоган: <span>{{ company.catch_phrase }}</span>
+    </li>
+    <li class="detail-list-item">
+      Контактный номер телефона: <span>{{ company.phone_number }}</span>
+    </li>
+    <li class="detail-list-item">
+      Адрес: <span>{{ company.full_address }}</span>
+    </li>
+  </ul>
 </div>

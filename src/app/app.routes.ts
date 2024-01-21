@@ -5,9 +5,9 @@ import { CompanyYandexMapComponent } from './pages/company-yandex-map/company-ya
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 
 export const routes: Routes = [
-    {path: 'list', component: CompanyListComponent},
-    {path: 'detail/:id', component: CompanyDetailComponent},
-    {path: 'map', component: CompanyYandexMapComponent},
-    {path: '', redirectTo: '/list', pathMatch: 'full'},
-    {path: '**', component: NotFoundComponent}    
+  { path: 'list', component: CompanyListComponent },
+  { path: 'detail/:id', component: CompanyDetailComponent },
+  { path: 'map', component: CompanyYandexMapComponent },
+  { path: '', redirectTo: '/list', pathMatch: 'full' },
+  { path: '**', component: NotFoundComponent },
 ];

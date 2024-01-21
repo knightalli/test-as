@@ -1,24 +1,23 @@
 <form class="form-container">
   <div class="name-container">
-    <label>Введите название: </label>
-    <input for="name" [formControl]="name" />
+    <input for="name" [formControl]="name" placeholder="Поиск по названию" />
   </div>
   <div class="select-container">
-    <div class="type-container">
-      <label>Выберите тип: </label>
-      <select for="type" [formControl]="type">
-        <option></option>
-        @for (type of types; track $index) {
-        <option>{{ type }}</option>
-        }
-      </select>
-    </div>
     <div class="industry-container">
       <label>Выберите вид деятельности: </label>
       <select for="industry" [formControl]="industry">
         <option></option>
         @for (industry of industries; track $index) {
         <option>{{ industry }}</option>
+        }
+      </select>
+    </div>
+    <div class="type-container">
+      <label>Выберите тип: </label>
+      <select for="type" [formControl]="type">
+        <option></option>
+        @for (type of types; track $index) {
+        <option>{{ type }}</option>
         }
       </select>
     </div>

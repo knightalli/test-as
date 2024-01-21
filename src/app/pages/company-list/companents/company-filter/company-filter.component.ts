@@ -15,7 +15,7 @@ import { Subscription } from 'rxjs';
   imports: [ReactiveFormsModule],
   templateUrl: './company-filter.component.html',
   styleUrl: './company-filter.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CompanyFilterComponent implements OnDestroy {
   public name: FormControl = new FormControl('');

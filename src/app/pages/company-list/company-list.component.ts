@@ -1,4 +1,10 @@
-import { Component, Input, OnDestroy, AfterViewChecked, ChangeDetectionStrategy } from '@angular/core';
+import {
+  Component,
+  Input,
+  OnDestroy,
+  AfterViewChecked,
+  ChangeDetectionStrategy,
+} from '@angular/core';
 import { HttpClientService } from '../../services/httpClient/http-client.service';
 import { HttpClientModule } from '@angular/common/http';
 import { CompanyItemComponent } from './companents/company-item/company-item.component';
@@ -17,7 +23,6 @@ import { CompanySortComponent } from './companents/company-sort/company-sort.com
   templateUrl: './company-list.component.html',
   styleUrl: './company-list.component.scss',
   providers: [HttpClientService],
-  
 })
 export class CompanyListComponent implements OnDestroy, AfterViewChecked {
   @Input() public field: string = '';
@@ -33,7 +38,7 @@ export class CompanyListComponent implements OnDestroy, AfterViewChecked {
   public subscription = this.httpService.getData().subscribe({
     next: (data: any) => {
       for (let item of data) {
-        this.listOfCompanies = [...this.listOfCompanies, item];  
+        this.listOfCompanies = [...this.listOfCompanies, item];
       }
       this.listCopy = this.listOfCompanies;
       this.isLoading = false;
@@ -72,14 +77,13 @@ export class CompanyListComponent implements OnDestroy, AfterViewChecked {
 
   //всё для фильтра ============================
   public filterList(filter: any) {
-    this.listOfCompanies = [...this.listCopy]    
+    this.listOfCompanies = [...this.listCopy];
 
-    console.log(filter);
     if (filter.name) {
       this.listOfCompanies = this.listOfCompanies.filter((company) =>
         company.business_name.includes(filter.name)
       );
-    } 
+    }
     if (filter.industry) {
       this.listOfCompanies = this.listOfCompanies.filter((company) =>
         company.industry.includes(filter.industry)

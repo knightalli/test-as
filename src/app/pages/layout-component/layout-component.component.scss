@@ -5,36 +5,35 @@
 }
 
 .nav {
-    padding: 25px 0;
+  padding: 25px 0;
 }
 
 .nav-list {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 50px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px;
 }
 
 .nav-list-item {
-    list-style-type: none;
-    font-size: 30px;
-    width: 250px;
-    align-items: center;
+  list-style-type: none;
+  font-size: 30px;
+  width: 250px;
+  align-items: center;
 
-    a{
-        text-align: center;
-        display:block;
-        text-decoration: none;
-        color:black;
-        padding: 5px;        
-    }
+  a {
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+  }
 
-    a:hover {
-        background-color: rgb(59, 238, 59);
-    }
+  a:hover {
+    background-color: rgb(59, 238, 59);
+  }
 }
 
 .active {
-    background-color: rgb(43, 185, 43);
+  background-color: rgb(43, 185, 43);
 }
-

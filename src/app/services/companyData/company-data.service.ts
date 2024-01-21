@@ -10,11 +10,9 @@ export class CompanyDataService {
 
   setCompany(company: any): void {
     this.company = company;
-    console.log(this.company);
   }
 
   getCompany(): any {
-    console.log(this.company);
     return this.company;
   }
 }

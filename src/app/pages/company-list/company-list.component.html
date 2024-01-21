@@ -5,11 +5,10 @@
 ></app-company-filter>
 <app-company-sort (sortFieldChange)="sortByField($event)"></app-company-sort>
 
-<div class="list-container">  
+<div class="list-container">
   @if (isLoading) {
-    <p class="loading">Загрузка...</p>
-  }
-  @if (!isLoading){
+  <p class="loading">Загрузка...</p>
+  } @if (!isLoading){
   <ul class="list">
     @for (company of listOfCompanies; track $index) {
     <li class="list-item">
@@ -17,5 +16,5 @@
     </li>
     }
   </ul>
-  } 
+  }
 </div>

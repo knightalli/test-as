@@ -5,6 +5,5 @@ import { routes } from './app.routes';
 import { CompanyDataService } from './services/companyData/company-data.service';
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideRouter(routes),
-  {provide: CompanyDataService}]
+  providers: [provideRouter(routes), { provide: CompanyDataService }],
 };

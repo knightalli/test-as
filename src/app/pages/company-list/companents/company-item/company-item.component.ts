@@ -8,17 +8,15 @@ import { CompanyDataService } from '../../../../services/companyData/company-dat
   imports: [],
   templateUrl: './company-item.component.html',
   styleUrl: './company-item.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CompanyItemComponent {
   @Input() company: any;
 
-  constructor(private _router: Router, private _cds: CompanyDataService) {
-   }
+  constructor(private _router: Router, private _cds: CompanyDataService) {}
 
-  public navigateToDetail(id:number): void {
-    console.log(this.company)
+  public navigateToDetail(id: number): void {
     this._cds.setCompany(this.company);
-    this._router.navigateByUrl(`detail/${id}`)
+    this._router.navigateByUrl(`detail/${id}`);
   }
 }

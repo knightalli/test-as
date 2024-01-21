@@ -6,8 +6,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   imports: [],
   templateUrl: './company-yandex-map.component.html',
   styleUrl: './company-yandex-map.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class CompanyYandexMapComponent {
-
-}
+export class CompanyYandexMapComponent {}

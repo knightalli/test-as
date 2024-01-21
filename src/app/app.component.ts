@@ -8,7 +8,7 @@ import { LayoutComponentComponent } from './pages/layout-component/layout-compon
   standalone: true,
   imports: [CommonModule, RouterOutlet, LayoutComponentComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrl: './app.component.scss',
 })
 export class AppComponent {
   title = 'test-artsofte';
