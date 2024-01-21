@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { CompanyDataService } from '../../../../services/companyData/company-data.service';
 
@@ -7,7 +7,8 @@ import { CompanyDataService } from '../../../../services/companyData/company-dat
   standalone: true,
   imports: [],
   templateUrl: './company-item.component.html',
-  styleUrl: './company-item.component.scss'
+  styleUrl: './company-item.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CompanyItemComponent {
   @Input() company: any;

@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
 import { CompanyDataService } from '../../services/companyData/company-data.service';
 import { Router } from '@angular/router';
 
@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
   imports: [],
   templateUrl: './company-detail.component.html',
   styleUrl: './company-detail.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CompanyDetailComponent implements OnInit {
 

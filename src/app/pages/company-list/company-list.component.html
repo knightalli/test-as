@@ -4,10 +4,18 @@
   (filterChange)="filterList($event)"
 ></app-company-filter>
 <app-company-sort (sortFieldChange)="sortByField($event)"></app-company-sort>
-<ul>
-  @for (company of listOfCompanies; track $index) {
-  <li>
-    <app-company-item [company]="company"></app-company-item>
-  </li>
+
+<div>  
+  @if (isLoading) {
+    <p>Загрузка...</p>
   }
-</ul>
+  @if (!isLoading){
+  <ul>
+    @for (company of listOfCompanies; track $index) {
+    <li>
+      <app-company-item [company]="company"></app-company-item>
+    </li>
+    }
+  </ul>
+  } 
+</div>

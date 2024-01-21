@@ -1,0 +1,19 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container-detail {
+    display: flex;
+    justify-content: center;
+}
+
+.detail-list-item {
+    list-style-type: none;
+    margin-bottom: 19px;
+
+    span {
+        font-weight: 600;
+    }
+}
