@@ -1,0 +1,48 @@
+@mixin label-normal {
+  display: block;
+  width: 110px;
+}
+
+@mixin select-normal {
+    display: block;
+    width: 250px;
+    cursor: pointer;
+  }
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.form-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.select-container {
+  align-items: end;
+}
+
+.industry-container {
+  label {
+    @include label-normal();
+  }
+  select {
+    @include select-normal()
+}
+padding-bottom: 15px;
+}
+
+.type-container {
+    label {
+      @include label-normal();
+    }
+    select {
+        @include select-normal()
+    }
+
+    padding-bottom: 15px;
+  }
